@@ -18,6 +18,7 @@ class CreatePetsTable extends Migration
             $table->string('item',255);
             $table->longText('texto');
             $table->timestamps();
+            
         });
     }
 
@@ -28,6 +29,6 @@ class CreatePetsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pets');
+        Schema::dropIfExists('pet');
     }
 }

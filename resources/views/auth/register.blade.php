@@ -38,6 +38,34 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('cpf') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">CPF</label>
+
+                            <div class="col-md-6">
+                                <input id="cpf" type="text" class="form-control" name="cpf" size="11" value="{{ old('cpf') }}" required>
+
+                                @if ($errors->has('cpf'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('cpf') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('rg') ? ' has-error' : '' }}">
+                            <label for="email" class="col-md-4 control-label">RG</label>
+
+                            <div class="col-md-6">
+                                <input id="rg" type="text" class="form-control" name="rg" value="{{ old('rg') }}" required>
+
+                                @if ($errors->has('rg'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('rg') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 

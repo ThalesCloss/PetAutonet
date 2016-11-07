@@ -17,7 +17,7 @@ class CreateNoticiasTable extends Migration
             $table->increments('id');
             $table->string('titulo',255);
             $table->longText('texto');
-            #$table->jsonb('palavras_chave');
+            #$table->json('palavras_chave');
             $table->timestamp('publicacao');
             $table->integer('user_id');
         });
