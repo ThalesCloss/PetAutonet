@@ -18,7 +18,8 @@ class CreateNoticiasTable extends Migration
             $table->string('titulo',255);
             $table->longText('texto');
             #$table->json('palavras_chave');
-            $table->timestamp('publicacao');
+            $table->dateTime('publicacao');
+            $table->dateTime('alteracao');
             $table->integer('user_id')->unsigned();;
             $table->foreign('user_id')->references('id')->on('users');
         });
