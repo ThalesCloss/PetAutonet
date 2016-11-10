@@ -30,7 +30,8 @@ class PoliticaNoticia
      */
     public function create(User $user)
     {
-        
+      return true;
+          dd($user->papeisUsuario);
     }
 
     /**
@@ -43,6 +44,7 @@ class PoliticaNoticia
     public function update(User $user, Noticia $noticia)
     {
         //
+        return true;
     }
 
     /**
