@@ -30,4 +30,5 @@ class User extends Authenticatable
     public function papeisUsuario(){
       return $this->hasMany(PapelUsuario::class);
     }
+
 }
