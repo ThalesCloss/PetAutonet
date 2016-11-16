@@ -22,8 +22,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $n=\App\Noticia::find(1);
-        $this->authorize('create', \App\Noticia::class);
+        //$this->authorize('create', \App\Noticia::class);
         return view('home');
     }
 }
