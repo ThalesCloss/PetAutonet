@@ -16,5 +16,6 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-//Route::get('/home', 'HomeController@index');
-Route::get('/home', 'HomeController@index')->middleware('can:create,App\Noticia');
+Route::get('/home', 'HomeController@index');
+
+Route::post('/noticia/gravar', 'NoticiaController@gravarNoticia')->middleware('can:create,App\Noticia')->middleware('can:update,App\Noticia');

@@ -32,8 +32,8 @@ class PoliticaNoticia
     {
       //dd($user->papeisUsuario);
       //dd(array_has($user->papeisUsuario,'items'));
-      return array_has($user->papeisUsuario,'PapelUsuario');
-
+      //return array_has($user->papeisUsuario,'PapelUsuario');
+      return true;
     }
 
     /**
