@@ -46,7 +46,7 @@ class PoliticaNoticia
     public function update(User $user, Noticia $noticia)
     {
         //
-        return false;
+        return true;
     }
 
     /**

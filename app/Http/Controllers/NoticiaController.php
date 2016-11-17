@@ -10,8 +10,8 @@ class NoticiaController extends Controller
 
     }
 
-    public function criarNoticia(){
-      //return view('');
+    public function cadastrarNoticia(){
+      return view('formularios.cadastro-noticia');
     }
 
     public function deletarNoticia(){
