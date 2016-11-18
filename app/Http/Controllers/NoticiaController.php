@@ -40,7 +40,7 @@ class NoticiaController extends Controller
         return view('formularios.cadastro-noticia',['noticia'=>$noticia]);
     }
 
-    public function deletarNoticia(){
-
+    public function deletarNoticia(Request $request){
+      $this->validate($request,['id'=>'required|numeric']);
     }
 }
