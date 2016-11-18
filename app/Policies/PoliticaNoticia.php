@@ -19,7 +19,7 @@ class PoliticaNoticia
      */
     public function view(User $user, Noticia $noticia)
     {
-        //
+        return true;
     }
 
     /**
@@ -30,10 +30,7 @@ class PoliticaNoticia
      */
     public function create(User $user)
     {
-      //dd($user->papeisUsuario);
-      //dd(array_has($user->papeisUsuario,'items'));
-      //return array_has($user->papeisUsuario,'PapelUsuario');
-      return true;
+      return $user->confirmRole(['NOTICIA','ADMIN']);
     }
 
     /**
@@ -45,8 +42,7 @@ class PoliticaNoticia
      */
     public function update(User $user, Noticia $noticia)
     {
-        //
-        return true;
+        return ($user->id===$noticia->user_id || $user->confirmRole('ADMIN'));
     }
 
     /**
@@ -58,6 +54,6 @@ class PoliticaNoticia
      */
     public function delete(User $user, Noticia $noticia)
     {
-        //
+        return $user->id===$noticia->user_id | $user->confirmRole('ADMIN');
     }
 }

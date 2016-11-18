@@ -20,3 +20,4 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/noticia/cadastrar', 'NoticiaController@cadastrarNoticia')->middleware('can:create,App\Noticia');
 Route::post('/noticia/gravar', 'NoticiaController@gravarNoticia')->middleware('can:create,App\Noticia');
+Route::get('/noticia/alterar/{id}','NoticiaController@alterarNoticia');

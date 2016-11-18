@@ -31,4 +31,20 @@ class User extends Authenticatable
       return $this->hasMany(PapelUsuario::class);
     }
 
+    public function confirmRole($role){
+      foreach ($this->papeisUsuario as $roles){
+        if(is_array($role))
+        {
+          if(in_array($roles->papel,$role))
+            return true;
+        }
+        else{
+        if($roles->papel===$role)
+          return true;
+        }
+      }
+      
+      return false;
+    }
+
 }

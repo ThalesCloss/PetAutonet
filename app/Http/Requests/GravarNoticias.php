@@ -24,10 +24,8 @@ class GravarNoticias extends FormRequest
     public function rules()
     {
         return [
-            'titulo':'required|max:255',
-            'texto':'required',
-            'publicacao':'required',
-            'user_id':'required'
+            'titulo'=>'required|max:255',
+            'texto'=>'required',
         ];
     }
 
@@ -36,8 +34,7 @@ class GravarNoticias extends FormRequest
       return [
         'titulo.required' =>  'O título é obrigatório',
         'titulo.max'  =>  'Tamanho máximo para o título é de 255 caracteres',
-        'publicacao.required' =>  'A data de publicação é obrigatória',
-        'user_id.required'  =>  'Usuário obrigatório'
+        'texto' =>  'O texto é obrigatório',
       ];
     }
 
