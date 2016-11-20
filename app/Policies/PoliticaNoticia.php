@@ -22,6 +22,10 @@ class PoliticaNoticia
         return true;
     }
 
+    public function listar(User $user){
+      return $user->confirmRole(['NOTICIA','ADMIN']);
+    }
+
     /**
      * Determine whether the user can create noticias.
      *

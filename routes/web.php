@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index');
 
+Route::get('/noticia/listar','NoticiaController@listarNoticia')->name('listarNoticias')->middleware('can:listar,App\Noticia');
 Route::get('/noticia/cadastrar', 'NoticiaController@cadastrarNoticia')->middleware('can:create,App\Noticia');
 Route::post('/noticia/gravar', 'NoticiaController@gravarNoticia')->middleware('can:create,App\Noticia');
 Route::get('/noticia/alterar/{id}','NoticiaController@alterarNoticia');

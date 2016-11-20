@@ -36,6 +36,13 @@
 
     </div>
 
+    <div class="form-group">
+      <label for="cadastrarnova">
+        <input type="checkbox" name="cadastrarnova" value="true">
+        Cadastrar nova após gravar?
+      </label>
+    </div>
+
   </form>
 </div>
 @endsection

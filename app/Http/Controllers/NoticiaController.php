@@ -23,11 +23,18 @@ class NoticiaController extends Controller
         if($request->get('id'))
         {
           $this->noticia->alteracao=$data->format(env('DATE_FOMRAT_PERSISTENCE'));
-          $this->noticia->update();
+          $st=$this->noticia->update();
         }
         else{
           $this->noticia->publicacao=$data->format(env('DATE_FOMRAT_PERSISTENCE'));
-          $this->noticia->save();
+          $st=$this->noticia->save();
+        }
+        if($st)
+        {
+          if($request->get('cadastrarnova'))
+            return back();
+          else
+            return redirect()->route('listarNoticias');
         }
     }
 
@@ -42,5 +49,9 @@ class NoticiaController extends Controller
 
     public function deletarNoticia(Request $request){
       $this->validate($request,['id'=>'required|numeric']);
+    }
+
+    public function listarNoticia(){
+      dd(Noticia::paginate(15));
     }
 }
