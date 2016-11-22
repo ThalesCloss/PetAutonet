@@ -14,10 +14,10 @@ class CreatePapelUsuariosTable extends Migration
     public function up()
     {
         Schema::create('papel_usuarios', function (Blueprint $table) {
-            $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->enum('papel',['ADMIN','NOTICIAS','CURSOS','PETEANOS']);
             $table->foreign('user_id')->references('id')->on('users');
+            $table->primary(['user_id','papel']);
         });
     }
 
