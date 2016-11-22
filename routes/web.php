@@ -19,7 +19,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/noticia/listar','NoticiaController@listarNoticia')->name('listarNoticias')->middleware('can:listar,App\Noticia');
-Route::get('/noticia/cadastrar', 'NoticiaController@cadastrarNoticia')->middleware('can:create,App\Noticia');
+Route::get('/noticia/cadastrar', 'NoticiaController@cadastrarNoticia')->middleware('can:create,App\Noticia')->name('cadastrarNoticia');
 Route::post('/noticia/gravar', 'NoticiaController@gravarNoticia')->middleware('can:create,App\Noticia');
+Route::put('/noticia/gravar','NoticiaController@atualizarNoticia');
 Route::get('/noticia/alterar/{id}','NoticiaController@alterarNoticia');
 Route::delete('/noticia/deletar','NoticiaController@deletarNoticia');

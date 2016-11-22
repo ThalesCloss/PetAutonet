@@ -7,6 +7,9 @@
   <form class="col-sm-12 col-xs-12 col-md-12 col-lg-12" action="/noticia/gravar" method="post">
      {{ csrf_field() }}
      <input type="hidden" name="id" value="{{isset($noticia->id)?$noticia->id:''}}">
+     @if(isset($noticia->id))
+     {{ method_field('PUT') }}
+     @endif
     <div class="form-group{{ $errors->has('titulo') ? ' has-error' : '' }}">
 
       <label for="titulo">Título</label>
