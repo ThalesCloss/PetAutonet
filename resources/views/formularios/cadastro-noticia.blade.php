@@ -1,10 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<script src="//cdn.ckeditor.com/4.6.0/standard/ckeditor.js"></script>
-<script type="text/javascript">
-  CKEDITOR.replace('texto');
-</script>
+
 <div class="wide">
   <div class="container">
     <div class="row">
