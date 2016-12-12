@@ -38,6 +38,29 @@
         </div>
 
         <div class="form-group">
+          <a href="">Vincular galeria de fotos</a>
+          <div class="">
+            <select class="" name="">
+
+            </select>
+          </div>
+          <div class="">
+            cadastro de album e fotos
+          </div>
+        </div>
+
+        <div class="form-group">
+          <a href="">Vincular arquivos</a>
+          <div class="">
+            <select class="" name="">
+
+            </select>
+          </div>
+          <div class="">
+            cadastro de tipos e arquivos
+          </div>
+        </div>
+        <div class="form-group">
           <label for="cadastrarnova">
             <input type="checkbox" name="cadastrarnova" value="true">
             Cadastrar nova após gravar?
