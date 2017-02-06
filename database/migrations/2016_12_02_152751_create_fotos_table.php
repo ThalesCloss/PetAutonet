@@ -18,7 +18,7 @@ class CreateFotosTable extends Migration
             $table->string('nome_arquivo');
             $table->string('legenda');
             $table->string('extensao');
-            $table->integer('album_fotos_id')->unsigned()
+            $table->integer('album_fotos_id')->unsigned();
             $table->foreign('album_fotos_id')->references('id')->on('album_fotos');
         });
     }

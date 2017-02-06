@@ -84,9 +84,18 @@
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="//cdn.ckeditor.com/4.6.0/full/ckeditor.js"></script>
+    <!--<script src="//cdn.ckeditor.com/4.6.0/full/ckeditor.js"></script>
     <script type="text/javascript">
       CKEDITOR.replace('texto');
-    </script>
+    </script>-->
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+  <script>
+  CKEDITOR.replace( 'texto', {
+filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token={{csrf_token()}}',
+filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token={{csrf_token()}}'
+});
+  </script>
 </body>
 </html>
